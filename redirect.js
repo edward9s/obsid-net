@@ -37,7 +37,7 @@ const button = document.getElementById("open");
 if (link === null) {
   status.textContent = "連結無效。";
 } else {
-  history.replaceState(null, "", window.location.pathname);
+  try { history.replaceState(null, "", window.location.pathname); } catch {}
   button.href = link;
   button.hidden = false;
   status.textContent = "若未自動開啟，請點擊下方按鈕。";
