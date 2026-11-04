@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; connect-src 'none'; img-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>開啟 Obsidian</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; color-scheme: light dark; }
+    body { margin: 0; min-height: 100dvh; display: grid; place-items: center; }
+    main { max-width: 24rem; padding: 2rem; text-align: center; }
+    a { display: inline-block; margin: 1rem; padding: .8rem 1.2rem; border-radius: .5rem; background: #5147a3; color: white; text-decoration: none; }
+    [hidden] { display: none; }
+  </style>
+  <script src="./redirect.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Obsidian</h1>
+    <p id="status">正在嘗試開啟…</p>
+    <a id="open" hidden>開啟 Obsidian</a>
+  </main>
+</body>
+</html>
