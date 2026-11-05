@@ -24,7 +24,10 @@ function parseLink(fragment) {
   if (
     !vault.trim() || !file.endsWith(".md") ||
     /[\u0000-\u001f]/.test(vault) ||
-    /[/\\\u0000-\u001f]/.test(file)
+    file.split("/").some(segment =>
+      !segment || segment === "." || segment === ".." ||
+      /[\\\u0000-\u001f]/.test(segment)
+    )
   ) return null;
 
   return uri.href;
